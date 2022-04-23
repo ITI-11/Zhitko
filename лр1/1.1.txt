@@ -1,0 +1,23 @@
+cd/d E:\2 семестр\OC\лр1
+md Zadanie1
+cd E:\2 семестр\OC\лр1\Zadanie1
+md A1 A2 A3
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A1
+copy C:\windows\*.ini
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A2
+dir > A2.txt C:\windows\ 
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A3
+xcopy "E:\2 семестр\OC\лр1\Zadanie1\A1\" "E:\2 семестр\OC\лр1\Zadanie1\A3\" & xcopy "E:\2 семестр\OC\лр1\Zadanie1\A2\" "E:\2 семестр\OC\лр1\Zadanie1\A3\"
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A1
+ren "*.ini" "~*.bak" 
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A3
+set > set.txt
+
+cd E:\2 семестр\OC\лр1\Zadanie1\A3
+set myname = Житко
+set > new_set.txt

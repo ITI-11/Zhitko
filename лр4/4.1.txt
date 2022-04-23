@@ -1,0 +1,41 @@
+until test "$X" = '5'
+do
+
+echo "1) Автор"
+echo "2) Расчет формулы"
+echo "3) Перенос файлов"
+echo "4) В файл (logon.data) записать дату и время входа в систему"
+echo "5) Выход"
+
+read X
+if test "$X" = '1'
+	then
+		echo "Житко Алина, ИТИ-11"
+if test "$X" = '2'
+	then
+		echo "Введите номер компьютера"
+		read num
+		echo "Введите номер по журналу"
+		read num2
+		echo "Введите возраст"
+		read age
+		y= expr $num \* $age + $num2 \* $age
+		echo $y
+else
+if test "$X" = '3'
+	then
+		echo "Введите каталог источник"
+		read katal1
+		echo "Введите каталог приемник"
+		read katal2
+		mv $katal1 $katal2
+else
+if test "$X" = '4'
+	then
+		who >logon.data
+
+fi
+fi
+fi
+fi
+done
